@@ -52,8 +52,9 @@ export default function Nav() {
 
 		return (
 			<Link to={to} className={linkClass}>
-				<img src={imgSrc} alt={altText} />
-				{isCurrent && <h1 className="page-title">{pageTitle}</h1>}
+				<img src={imgSrc}/>
+				<p class = "section_name">{altText}</p>
+				
 			</Link>
 		);
 	};
@@ -63,12 +64,12 @@ export default function Nav() {
 			{renderNavLink(
 				"/",
 				astronautHelmet,
-				"astronaut helmet icon",
+				"About",
 				"nav-about"
 			)}
-			{renderNavLink("/skills", deadEye, "deadEye icon", "nav-skills")}
-			{renderNavLink("/projects", stack, "stack icon", "nav-projects")}
-			{renderNavLink("contact", envelope, "envelope icon", "nav-contact")}
+			{renderNavLink("/skills", deadEye, "Skills", "nav-skills")}
+			{renderNavLink("/projects", stack, "Projects", "nav-projects")}
+			{renderNavLink("/contact", envelope, "Contact", "nav-contact")}
 		</nav>
 	);
 }

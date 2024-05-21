@@ -43,7 +43,7 @@ export default class AboutMenu extends Component {
 
     return (
       <>
-        <div className="menu">
+        <div className="about-menu">
           {menuItems.map((item, index) => (
             <AboutMenuItem
               key={index}

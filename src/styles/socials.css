@@ -7,7 +7,7 @@ footer ul { /*Contains Solcials*/
 	display: flex;
 	position: absolute;
 	top: 35%;
-	left: 50%;
+    left: 43%;
 	transform: translate(-50%, -50%);
 }
 
@@ -32,6 +32,7 @@ footer ul li a {
 }
 
 footer ul li a .icon {
+	line-height: 37px;
 	position: relative;
 	color: #262626;
 	transition: .5s;
