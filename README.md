@@ -1,3 +1,6 @@
+# Live
+The project is live and accessible at: [TeerthaDeb.github.io/Portfolio](https://TeerthaDeb.github.io/Portfolio)
+
 # Maharaj Teertha Deb Portfolio
 
 This repository contains the source code for Maharaj Teertha Deb's portfolio website. You're welcome to fork this repository and customize it for your own portfolio.
@@ -8,12 +11,12 @@ To get started, follow these steps:
 
 1. Clone the repository to your local machine.
    ```bash
-	git clone https://github.com/your-username/maharaj-teertha-deb-portfolio.git
+	git clone https://github.com/TeerthaDeb/Portfolio.git
    ```
 
 2. Navigate to the repository directory.
    ```
-   cd maharaj-teertha-deb-portfolio
+   cd Portfolio
    ```
 
 3. Install dependencies using npm.
