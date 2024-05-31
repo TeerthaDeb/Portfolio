@@ -1,9 +1,22 @@
 # Live
 The project is live and accessible at: [TeerthaDeb.github.io/Portfolio](https://TeerthaDeb.github.io/Portfolio)
 
-# Maharaj Teertha Deb Portfolio
+## Table of Contents
+- [Maharaj Teertha Deb Portfolio](#About)
+- [Tech Stack](#tech-stack)
+- [Initialization](#setup)
+- [Live](#live)
+
+## Maharaj Teertha Deb Portfolio
 
 This repository contains the source code for Maharaj Teertha Deb's portfolio website. You're welcome to fork this repository and customize it for your own portfolio.
+
+## Tech Stack
+- Front-end: HTML5, CSS3, JavaScript (ES6+ syntax), ReactJS, React Hooks, React Router
+- Build Tools: Webpack, Prettier
+- Deployment: GitHub Pages
+- UI Library: Material-UI
+- Additional Libraries: React-Scroll, React-Transition-Group, React-Countup, React-Particles, React-Confetti, React-Toastify, React-Loading
 
 ## Initialization
 
@@ -30,6 +43,17 @@ To get started, follow these steps:
    ```
 
 5. Open your browser and go to `http://localhost:3000` to view the portfolio.
+
+6. To Build it :
+	```
+	npm run build
+	```
+
+7. To Deploy:
+	```
+	npm run deploy
+	```
+
 
 ## About
 
