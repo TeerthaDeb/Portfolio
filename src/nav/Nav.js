@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import astronautHelmet from "../assets/astronaut-helmet.png";
 import deadEye from "../assets/dead-eye.png";
@@ -19,28 +19,14 @@ export default function Nav() {
 				return "nav-projects";
 			case "/contact":
 				return "nav-contact";
-			default:
-				return "";
-		}
-	};
-
-	const getPageTitle = () => {
-		switch (location.pathname) {
-			case "/":
+			case "/Portfolio":
 				return "ABOUT";
-			case "/skills":
-				return "SKILLS";
-			case "/projects":
-				return "PROJECTS";
-			case "/contact":
-				return "CONTACT";
 			default:
 				return "";
 		}
 	};
 
 	const navPositionClass = getNavPositionClass();
-	const pageTitle = getPageTitle();
 
 	const isCurrentPage = (navClass) => {
 		return navClass === navPositionClass;
@@ -52,15 +38,16 @@ export default function Nav() {
 
 		return (
 			<Link to={to} className={linkClass}>
-				<img src={imgSrc}/>
-				<p class = "section_name">{altText}</p>
-				
+				<img src={imgSrc} alt={altText} />
+				<p className="section_name">{altText}</p>
+
 			</Link>
 		);
 	};
 
 	return (
 		<nav className={`nav ${navPositionClass}`}>
+
 			{renderNavLink(
 				"/",
 				astronautHelmet,

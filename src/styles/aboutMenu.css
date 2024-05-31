@@ -3,9 +3,7 @@
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	top: 70%;
-	transform: translateY(-60%);
-	
+	top: 34%;
 }
 
 @media (min-width: 700px) {
@@ -16,7 +14,7 @@
 
 .title {
 	padding-right: 1rem;
-	font-size: 2.7rem;
+	font-size: xx-large;
 }
 
 .item.active .title {
@@ -28,58 +26,52 @@
 }
 
 .sub-container {
-	width: 18.5rem;
+	width: 30vw;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	top: 32%;
+	top: 22%;
 	right: 2vw;
 	cursor: pointer;
-	height: 60%;
-    
-}
-
-@media (max-height: 740px) {
-	.sub-container{
-		overflow: scroll;
-	}
+	height: 66%;
 }
 
 .active-subheading {
 	cursor: default;
+	font-size: larger;
+	position: relative;
 }
 
 .item.active:nth-child(1) {
-	background: linear-gradient(90deg, var(--transparent), var(--purple) 70%);
+	transition-duration: 2.5s;
+	background: linear-gradient(270deg, var(--transparent), var(--purple) 50%);
 	border-radius: var(--radius-right);
 }
 
 .item.active:nth-child(2) {
-	background: linear-gradient(90deg, var(--transparent), var(--blue) 70%);
+	transition-duration: 2.5s;
+	background: linear-gradient(270deg, var(--transparent), var(--blue) 50%);
 	border-radius: var(--radius-right);
 }
 
 .item.active:nth-child(3) {
-	background: linear-gradient(90deg, var(--transparent), var(--cyan) 70%);
+	transition-duration: 2.5s;
+	background: linear-gradient(270deg, var(--transparent), var(--cyan) 50%);
 	border-radius: var(--radius-right);
 }
 
-.sub-container-1.active-subheading h3,
-.sub-container-2.active-subheading h3,
-.sub-container-3.active-subheading h3 {
-	border-radius: var(--radius-left);
-}
-
 .sub-container-1.active-subheading h3 {
-	background: linear-gradient(90deg, var(--purple), var(--transparent) 100%);
+	background: linear-gradient(45deg, var(--purple), var(--transparent) 100%);
+	font-size: xx-large;
 }
 
 .sub-container-2.active-subheading h3 {
-	background: linear-gradient(90deg, var(--blue), var(--transparent) 100%);
+	font-size: xx-large;
+	background: linear-gradient(45deg, var(--blue), var(--transparent) 100%);
 }
 
 .sub-container-3.active-subheading h3 {
-	background: linear-gradient(90deg, var(--cyan), var(--transparent) 100%);
+	background: linear-gradient(45deg, var(--cyan), var(--transparent) 100%);
 	font-size: xx-large;
 }
 
@@ -94,13 +86,11 @@
 
 .active-subheading .p-container {
 	display: block;
-	padding-bottom: 10px;
 }
 
 .icon-title-container {
 	display: flex;
 	gap: 1.2rem;
-	margin-bottom: 0.5rem;
 	cursor: default;
 }
 
@@ -136,12 +126,17 @@
 	}
 }
 
+@media(max-height: 1181px){
+	.sub-container{
+		overflow-y: auto;
+	}
+}
+
 @media (max-width: 700px) {
 	.sub-container {
-		width: 98%;
-		top: 40vh;
-		left: 50%;
-		transform: translateX(-50%);
+		width: 90%;
+		top: 60%; /** Moving this will disturb the postion for About Me*/
+		height: 41vh;
 	}
 
 	.title {
@@ -174,6 +169,7 @@
 
 .item,
 .item:after {
+	margin-bottom: 16px;
 	width: 260px;
 	height: 46px;
 	font-size: 20px;
@@ -184,6 +180,7 @@
 	box-shadow: 6px 0px 0px #00E6F6;
 	outline: transparent;
 	position: relative;
+
 }
 
 .item:after {
@@ -194,7 +191,7 @@
 	--slice-4: inset(40% -6px 43% 0);
 	--slice-5: inset(80% -6px 5% 0);
 
-	content: 'ALTERNATE TEXT';
+	content: '01010101010101010101010';
 	display: block;
 	position: absolute;
 	top: 0;
@@ -207,7 +204,7 @@
 }
 
 .item:hover:after {
-	animation: 0.5s glitch;
+	animation: 0.7s glitch;
 	animation-timing-function: steps(2, end);
 }
 
@@ -273,4 +270,53 @@
 	.item:after {
 		width: 48vw;
 	}
+}
+
+
+
+
+
+/* === removing default button style ===*/
+.button {
+	margin: 0;
+	height: auto;
+	background: transparent;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+}
+
+/* button styling */
+.button {
+	--border-right: 6px;
+	--text-stroke-color: #FFEA00;
+	--animation-color: #00d9ff;
+	letter-spacing: 3px;
+	text-decoration: none;
+	font-size: var(--fs-size);
+	position: relative;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+	position: absolute;
+	box-sizing: border-box;
+	content: attr(data-text);
+	color: var(--animation-color);
+	width: 0%;
+	inset: 0;
+	border-right: var(--border-right) solid var(--animation-color);
+	overflow: hidden;
+	transition: 0.8s;
+	-webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.button:hover .hover-text {
+	width: 100%;
+	filter: drop-shadow(0 0 23px var(--animation-color));
+	padding: 0.5rem 0 0.5rem 1rem;
 }

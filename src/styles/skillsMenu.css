@@ -1,108 +1,128 @@
 .skill-menu {
-  width: 31.2rem;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: 30%;
-  right: 15vw;
-  align-items: flex-end;
+	width: 31.2rem;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	top: 30%;
+	right: 15vw;
+	align-items: flex-end;
 }
 
 .skill-item {
-  height: 3.7rem;
-  width: 50%;
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  align-items: center;
-  cursor: pointer;
+	height: 3.7rem;
+	width: 9rem;
+	display: flex;
+	position: relative;
+	justify-content: flex-end;
+	align-items: center;
+	cursor: pointer;
 }
 
 .skill-title {
-  font-size: 1rem;
-  padding-right: 4.5rem;
+	font-size: x-large;
 }
 
 .skill-item.activeSkill .skill-title {
-  font-size: 1.5rem;
+	position: relative;
+	font-size: xx-large;
+	left: 13px;
 }
 
 .activeSkill {
-  border-radius: var(--radius-left);
-  cursor: default;
+	border-radius: var(--radius-left);
+	cursor: default;
 }
 
 .skill-item.activeSkill:nth-child(1) {
-  background: linear-gradient(270deg, #ffffff00, var(--purple) 70%);
+	width: 200px;
+	background: linear-gradient(270deg, #ffffff00, var(--purple) 70%);
 }
+
 .skill-item.activeSkill:nth-child(2) {
-  background: linear-gradient(270deg, #ffffff00, var(--blue) 70%);
+	width: 200px;
+	background: linear-gradient(270deg, #ffffff00, var(--blue) 70%);
+}
+
+.skill-item.activeSkill:nth-child(3) {
+	height: fit-content;
+	width: 200px;
+	background: linear-gradient(270deg, #ffffff00, var(--cyan) 70%);
 }
 
 .skill-icon {
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  top: 1.8rem;
-  left: 8rem;
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	top: 1.8rem;
+	left: 4rem;
 }
 
-.skill-sub-container-1 h3,
-.skill-sub-container-2 h3 {
-  position: relative;
-  margin: 0;
+.skill-sub-container-1 p,
+.skill-sub-container-2 p,
+.skill-sub-container-3 p {
+	position: relative;
+	margin: 0;
 }
 
 .menu {
-  width: 19rem;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: 50%;
-  transform: translateY(-25%);
-  right: 15vw;
+	width: 19rem;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	top: 50%;
+	transform: translateY(-25%);
+	right: 15vw;
 }
 
 .skill-sub-container-1,
-.skill-sub-container-2 {
-  display: flex;
-  justify-content: right;
-  gap: 2rem;
+.skill-sub-container-2,
+.skill-sub-container-3 {
+	display: flex;
+	justify-content: right;
+	gap: 2rem;
 }
 
 .level-container {
-  display: flex;
-  gap: 0.3rem;
+	display: flex;
+	gap: 0.3rem;
 }
 
 .level-point {
-  width: 3rem;
-  height: 2rem;
-  border-radius: 0.2rem;
+	width: 3rem;
+	height: 2rem;
+	border-radius: 0.2rem;
 }
 
 .filled {
-  background: linear-gradient(180deg, #236473, #25afce, #7ce7ff);
+	background: linear-gradient(180deg, #236473, #25afce, #7ce7ff);
 }
+
 .unfilled {
-  background: linear-gradient(180deg, #1c8298, #074654, #074654);
+	background: linear-gradient(180deg, #1c8298, #074654, #074654);
 }
 
 .skill-sub-container {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
 }
 
 @media (max-width: 700px) {
-  .menu {
-    width: 10rem;
-    top: 30%;
-    left: 50%;
-    transform: translateY(-50%);
-  }
+	.menu {
+		width: 10rem;
+		top: 30%;
+		left: 50%;
+		transform: translateY(-50%);
+	}
 }
+
+
+.skill-menu .skill-sub-container {
+	overflow-y: auto;
+	height: 33vh;
+}
+
 
 @media (max-width : 700px) {
 	.skill-menu {
@@ -110,11 +130,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		align-items: center;
-		top: 40%;
-	}
-
-	.skill-item.activeSkill .skill-title {
-		font-size: 1rem;
+		top: 37%;
 	}
 
 	.skill-icon {
@@ -122,7 +138,8 @@
 	}
 
 	.skill-sub-container-1,
-	.skill-sub-container-2 {
+	.skill-sub-container-2,
+	.skill-sub-container-3 {
 		gap: 0.5rem;
 	}
 
@@ -140,17 +157,128 @@
 		width: 1.2rem;
 		height: 1rem;
 		border-radius: 0.1rem;
-	  }
-	  .level-container {
+	}
+
+	.level-container {
 		gap: 0.15rem;
-	  }
-	  
-	  h1 {
+	}
+
+	h1 {
 		font-size: 0.8rem;
-	  }
-	  h2,
-	  h3,
-	  p {
+	}
+
+	h2,
+	h3,
+	p {
 		font-size: 0.7rem;
-	  }
+	}
+}
+
+
+.skill-item,
+.skill-item::after {
+	padding: 10px 50px;
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	background-color: transparent;
+	position: relative;
+}
+
+.skill-item::after {
+	--move1: inset(50% 50% 50% 50%);
+	--move2: inset(31% 0 40% 0);
+	--move3: inset(39% 0 15% 0);
+	--move4: inset(45% 0 40% 0);
+	--move5: inset(45% 0 6% 0);
+	--move6: inset(14% 0 61% 0);
+	clip-path: var(--move1);
+	content: '-----';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+}
+
+.skill-item:hover::after {
+	animation: glitch_4011 0.5s;
+	text-shadow: 10 10px 10px black;
+	animation-timing-function: steps(2, end);
+	text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+	background-color: transparent;
+	border: 3px solid rgb(0, 255, 213);
+}
+
+.skill-item:hover {
+	text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+.skill-item {
+	width: 170px;
+	height: 44px;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: solid;
+	border-image: linear-gradient(to right, blue, purple, blue, cyan) 2;
+	box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+}
+
+@keyframes glitch_4011 {
+	0% {
+		clip-path: var(--move1);
+		transform: translate(0px, -10px);
+	}
+
+	10% {
+		clip-path: var(--move2);
+		transform: translate(-10px, 10px);
+	}
+
+	20% {
+		clip-path: var(--move3);
+		transform: translate(10px, 0px);
+	}
+
+	30% {
+		clip-path: var(--move4);
+		transform: translate(-10px, 10px);
+	}
+
+	40% {
+		clip-path: var(--move5);
+		transform: translate(10px, -10px);
+	}
+
+	50% {
+		clip-path: var(--move6);
+		transform: translate(-10px, 10px);
+	}
+
+	60% {
+		clip-path: var(--move1);
+		transform: translate(10px, -10px);
+	}
+
+	70% {
+		clip-path: var(--move3);
+		transform: translate(-10px, 10px);
+	}
+
+	80% {
+		clip-path: var(--move2);
+		transform: translate(10px, -10px);
+	}
+
+	90% {
+		clip-path: var(--move4);
+		transform: translate(-10px, 10px);
+	}
+
+	100% {
+		clip-path: var(--move1);
+		transform: translate(0);
+	}
 }

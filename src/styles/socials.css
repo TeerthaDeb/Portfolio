@@ -1,13 +1,27 @@
-footer{
-	padding-bottom: 100px;
+footer {
+	padding-left: 47dvw;
+    bottom: -46pc;
 	position: relative;
+	p{
+		font-size: xx-large;
+		position: relative;
+		padding-bottom: 142px;
+	}
 }
 
-footer ul { /*Contains Solcials*/
+@media (main-width : 767px) {
+	footer {
+		padding-left: 35dvw !important; 
+	}
+	
+}
+
+footer ul {
+	/*Contains Solcials*/
 	display: flex;
 	position: absolute;
 	top: 35%;
-    left: 43%;
+
 	transform: translate(-50%, -50%);
 }
 
@@ -32,7 +46,7 @@ footer ul li a {
 }
 
 footer ul li a .icon {
-	line-height: 37px;
+	line-height: 40px;
 	position: relative;
 	color: #262626;
 	transition: .5s;
@@ -76,14 +90,18 @@ footer ul li:nth-child(4) a:before {
 	background: #dd4b39;
 }
 
-@media (max-width: 700px){
-	.icon-title-container, .icon {
+@media (max-width: 700px) {
+
+	.icon-title-container,
+	.icon {
 		display: block;
 	}
-	footer ul li a{
+
+	footer ul li a {
 		text-decoration: none;
 	}
-	footer ul li a i{
+
+	footer ul li a i {
 		top: 5px;
 		left: 1px;
 	}

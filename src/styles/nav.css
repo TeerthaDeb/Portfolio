@@ -41,6 +41,7 @@ a {
 
 .nav-link {
 	opacity: 0.7;
+	text-decoration: none;
 }
 
 .nav-link:hover {

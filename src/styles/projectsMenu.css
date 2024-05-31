@@ -1,128 +1,392 @@
 .project-menu {
-  width: 45rem;
-  position: fixed;
-  display: flex;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
+	width: 45rem;
+	position: fixed;
+	display: flex;
+	top: 25%;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .project-items-container {
-  flex-direction: column;
-  display: flex;
-  position: relative;
-  width: 40%;
-  margin-top: 12rem;
-  align-items: flex-end;
-  left: -15%;
+	flex-direction: column;
+	display: flex;
+	position: relative;
+	width: 40%;
+	margin-top: 12rem;
+	align-items: flex-end;
+	left: -15%;
 }
 
 .project-item {
-  height: 3.75rem;
-  width: 90%;
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-  align-items: center;
-  cursor: pointer;
+	height: 3.75rem;
+	width: 90%;
+	display: flex;
+	position: relative;
+	justify-content: flex-end;
+	align-items: center;
+	cursor: pointer;
+	
 }
 
 .project-item.activeProject .title {
-  font-size: 2.0rem;
-}
-
-.activeProject {
-  border-radius: var(--radius-left);
-  cursor: default;
-}
-
-.project-item.activeProject:nth-child(1) {
-  background: linear-gradient(270deg, #ffffff00, var(--purple) 70%);
-}
-.project-item.activeProject:nth-child(2) {
-  background: linear-gradient(270deg, #ffffff00, var(--blue) 70%);
-}
-.project-item.activeProject:nth-child(3) {
-  background: linear-gradient(270deg, #ffffff00, var(--cyan) 70%);
+	font-size: 2.0rem;
 }
 
 .project-sub-container {
-  width: 60%;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
+	width: 60%;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.375rem;
 }
+
 .project-sub-container h3 {
-  position: relative;
-  margin: 0;
+	position: relative;
+	margin: 0;
 }
+
 .project-sub-container img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0.5rem 3rem 0.5rem 0.5rem;
-  opacity: 0.9;
+	width: 100%;
+	object-fit: cover;
+	opacity: 0.9;
 }
+
 .project-sub-container p {
-  font-size: 0.875rem;
+	font-size: 0.875rem;
 }
 
 .link-container a {
-  color: white;
-  text-decoration: none;
-  margin-top: 1rem;
-  width: 50%;
-  height: 2.75rem;
-  text-align: center;
+	color: white;
+	text-decoration: none;
+	margin-top: 1rem;
+	width: 50%;
+	height: 2.75rem;
+	text-align: center;
 }
 
 .link-container {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 @media (max-width: 1100px) {
-  .project-menu {
-    width: 28rem;
-    top: 40%;
-    transform: translateX(-50%);
-  }
-  .project-item {
-    height: 2rem;
-    width: 100%;
-  }
-  .project-item.activeProject .title {
-    font-size: 21px;
-  }
-  .title {
-    font-size: 20px;
-  }
-  .item.active .title {
-	font-size: 30px;
-  }
+	.project-menu {
+		width: 28rem;
+		top: 40%;
+		transform: translateX(-50%);
+	}
+
+	.project-item {
+		height: 2rem;
+		width: 100%;
+		padding-bottom: 11px;
+	}
+
+	.project-item.activeProject .title {
+		font-size: 21px;
+	}
+
+	.title {
+		font-size: 20px;
+	}
+
+	.item.active .title {
+		font-size: 30px;
+	}
 }
+
 @media (max-width: 700px) {
-  .project-menu {
-    width: 28rem;
-    flex-direction: column;
-    align-items: center;
-  }
-  .project-menu p {
-    font-size: 0.7rem;
-  }
-  .project-sub-container {
-    margin-top: 1rem;
-    width: 12rem;
-  }
-  .project-sub-container img {
-    width: 12rem;
-  }
-  .link-container a {
-    margin-top: 0.5rem;
-    width: 50%;
-    height: 2rem;
-  }
-  .project-items-container {
-    margin-top: 0;
-  }
+	.project-menu {
+		width: 28rem;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.project-menu p {
+		font-size: 0.7rem;
+	}
+
+	.project-sub-container {
+		margin-top: 1rem;
+		width: 12rem;
+	}
+
+	.project-sub-container img {
+		width: 12rem;
+	}
+
+	.link-container a {
+		margin-top: 0.5rem;
+		width: 50%;
+		height: 2rem;
+	}
+
+	.project-items-container {
+		margin-top: -48px;
+	}
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.radio-wrapper {
+	position: relative;
+	height: 38px;
+	width: 100%;
+	margin: 3px;
+}
+
+.radio-wrapper .input {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	cursor: pointer;
+	z-index: 10;
+	opacity: 0;
+}
+
+
+.btn {
+	--primary: #f5434f;
+	--shadow-primary: #631e29;
+	--color: #ffffff;
+	--font-size: 9px;
+	--shadow-primary-hue: 180;
+	--shadow-secondary-hue: 60;
+	--shadow-secondary: #000000;
+	--clip: polygon(11% 0,
+			95% 0,
+			100% 25%,
+			90% 90%,
+			95% 90%,
+			85% 90%,
+			85% 100%,
+			7% 100%,
+			0 80%);
+	--border: 5px;
+	--shimmy-distance: 5;
+	--clip-one: polygon(0 2%,
+			100% 2%,
+			100% 95%,
+			95% 95%,
+			95% 90%,
+			85% 90%,
+			85% 95%,
+			8% 95%,
+			0 70%);
+	--clip-two: polygon(0 78%,
+			100% 78%,
+			100% 100%,
+			95% 100%,
+			95% 90%,
+			85% 90%,
+			85% 100%,
+			8% 100%,
+			0 78%);
+	--clip-three: polygon(0 44%,
+			100% 44%,
+			100% 54%,
+			95% 54%,
+			95% 54%,
+			85% 54%,
+			85% 54%,
+			8% 54%,
+			0 54%);
+	--clip-four: polygon(0 0,
+			100% 0,
+			100% 0,
+			95% 0,
+			95% 0,
+			85% 0,
+			85% 0,
+			8% 0,
+			0 0);
+	--clip-five: polygon(0 0,
+			100% 0,
+			100% 0,
+			95% 0,
+			95% 0,
+			85% 0,
+			85% 0,
+			8% 0,
+			0 0);
+	--clip-six: polygon(0 40%,
+			100% 40%,
+			100% 85%,
+			95% 85%,
+			95% 85%,
+			85% 85%,
+			85% 85%,
+			8% 85%,
+			0 70%);
+	--clip-seven: polygon(0 63%,
+			100% 63%,
+			100% 80%,
+			95% 80%,
+			95% 80%,
+			85% 80%,
+			85% 80%,
+			8% 80%,
+			0 70%);
+	color: var(--color);
+	text-transform: uppercase;
+	font-size: var(--font-size);
+	letter-spacing: 3px;
+	position: relative;
+	font-weight: 900;
+	width: 100%;
+	height: 100%;
+	line-height: 38px;
+	text-align: center;
+	transition: background 0.2s, 0.3s;
+	
+}
+
+.input:checked+.btn {
+	--primary: #161a25;
+	--shadow-primary: #ffffff;
+}
+
+.input:hover+.btn {
+	--primary: #cc133c;
+	--font-size: 11px;
+}
+
+.btn:after,
+.btn:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	clip-path: var(--clip);
+	z-index: -1;
+}
+
+.btn:before {
+	background: var(--shadow-primary);
+	transform: translate(var(--border), 0);
+}
+
+.btn:after {
+	background: var(--primary);
+}
+
+.btn__glitch {
+	position: absolute;
+	top: calc(var(--border) * -1);
+	left: calc(var(--border) * -1);
+	right: calc(var(--border) * -1);
+	bottom: calc(var(--border) * -1);
+	background: var(--shadow-primary);
+	text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
+	clip-path: var(--clip);
+	animation: glitch_2 2s infinite;
+	display: none;
+}
+
+.input:hover+.btn .btn__glitch {
+	display: block;
+}
+
+.input:checked+.btn .btn__glitch {
+	display: block;
+	animation: glitch_2 5s infinite;
+}
+
+.btn__glitch:before {
+	content: "";
+	position: absolute;
+	top: calc(var(--border) * 1);
+	right: calc(var(--border) * 1);
+	bottom: calc(var(--border) * 1);
+	left: calc(var(--border) * 1);
+	clip-path: var(--clip);
+	background: var(--primary);
+	z-index: -1;
+}
+
+@keyframes glitch_2 {
+	0% {
+		clip-path: var(--clip-one);
+	}
+
+	2%,
+	8% {
+		clip-path: var(--clip-two);
+		transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+	}
+
+	6% {
+		clip-path: var(--clip-two);
+		transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+	}
+
+	9% {
+		clip-path: var(--clip-two);
+		transform: translate(0, 0);
+	}
+
+	10% {
+		clip-path: var(--clip-three);
+		transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+	}
+
+	13% {
+		clip-path: var(--clip-three);
+		transform: translate(0, 0);
+	}
+
+	14%,
+	21% {
+		clip-path: var(--clip-four);
+		transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+	}
+
+	25% {
+		clip-path: var(--clip-five);
+		transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+	}
+
+	30% {
+		clip-path: var(--clip-five);
+		transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+	}
+
+	35%,
+	45% {
+		clip-path: var(--clip-six);
+		transform: translate(calc(var(--shimmy-distance) * -1%));
+	}
+
+	40% {
+		clip-path: var(--clip-six);
+		transform: translate(calc(var(--shimmy-distance) * 1%));
+	}
+
+	50% {
+		clip-path: var(--clip-six);
+		transform: translate(0, 0);
+	}
+
+	55% {
+		clip-path: var(--clip-seven);
+		transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+	}
+
+	60% {
+		clip-path: var(--clip-seven);
+		transform: translate(0, 0);
+	}
+
+	31%,
+	61%,
+	100% {
+		clip-path: var(--clip-four);
+	}
 }

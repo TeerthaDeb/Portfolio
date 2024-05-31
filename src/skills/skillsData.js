@@ -77,6 +77,28 @@ const skills = {
 			level: 2,
 		}
 	],
+	3 : [
+		{
+			title: "Docker",
+			level: 3,
+		},
+		{
+			title: "Git",
+			level: 6,
+		},
+		{
+			title: "VS Code",
+			level: 6,
+		},
+		{
+			title: "Anaconda",
+			level: 5,
+		},
+		{
+			title: "Linux",
+			level: 4,
+		},
+	]
 };
 
 export default skills;

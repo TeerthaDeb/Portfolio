@@ -14,7 +14,7 @@ const projects = {
 			</>
 		),
 		github: "https://github.com/TeerthaDeb/Jarvis-AI",
-		demo: "https://netlify.com",
+		demo: "https://youtu.be/qYyU6hHcF4Q",
 	},
 	2: {
 		title: "Le Vieux StLaurent Website",
@@ -26,7 +26,7 @@ const projects = {
 				</p>
 			</>
 		),
-		github: "https://github.com/WebFusion01/le-vieux-st-laurent.github.io/",
+		github: "https://webfusion01.github.io/le-vieux-st-laurent.github.io/index.html",
 		demo: "https://webfusion01.github.io/le-vieux-st-laurent.github.io/index.html",
 	},
 	3: {

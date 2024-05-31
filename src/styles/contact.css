@@ -18,7 +18,7 @@ form {
 
 input,
 #message {
-  width: 100%;
+  width: 94%;
   background-color: #00000040;
   border-radius: 0.3rem;
   border: 0.07rem solid rgba(255, 255, 255, 0.4);
@@ -91,8 +91,9 @@ label {
 }
 @media (max-width: 700px) {
   .contact-menu {
-    width: 70%;
-    top: 85%;
+    width: 80%;
+    top: 465px;
+	height: 500px;
   }
   form {
     width: 100%;
@@ -105,3 +106,192 @@ label {
     padding: 0 0.5rem;
   }
 }
+
+#Recaptcha{
+	width: 100%;
+}
+
+.contact-menu {
+	top: 30pc;
+	background: linear-gradient(#000000ee, #000000ec) padding-box, linear-gradient(324deg, #002df6ed 5%, #00ffa2, #ff0000) border-box;
+    border: 3px solid transparent;
+    padding: 18px 19px;
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 1s cubic-bezier(0.4, 0, 1, 1) infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 20%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.contact-menu button:active {
+	scale: 0.95;
+}
+
+.contact-menu .form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.contact-menu .form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.contact-menu .form-group label {
+	display: block;
+	margin-bottom: 5px;
+	color: #717171;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.contact-menu .form-group input {
+	width: 94%;
+	border-radius: 8px;
+	color: #ffffff;
+	border: 1px solid #414141;
+}
+
+.contact-menu .form-group textarea {
+	width: 100%;
+	padding: 12px 16px;
+	border-radius: 8px;
+	resize: none;
+	color: #fff;
+	height: 96px;
+	border: 1px solid #414141;
+	background-color: transparent;
+	font-family: inherit;
+}
+
+.contact-menu .form-group input::placeholder {
+	opacity: 0.5;
+}
+
+.contact-menu .form-group input:focus {
+	outline: none;
+	border-color: #6aff00;
+}
+
+.contact-menu .form-group textarea:focus {
+	outline: none;
+	border-color: #e81cff;
+}
+
+
+
+
+.btn-submit {
+	--border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+	--border-width: 0.125em;
+	--curve-size: 0.5em;
+	--blur: 30px;
+	--bg: #080312;
+	--color: #afffff;
+	color: var(--color);
+	cursor: pointer;
+	/* use position: relative; so that BG is only for .btn */
+	position: relative;
+	isolation: isolate;
+	display: inline-grid;
+	place-content: center;
+	padding: 0.5em 1.5em;
+	font-size: 17px;
+	border: 0;
+	text-transform: uppercase;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+	clip-path: polygon(
+	  /* Top-left */ 0% var(--curve-size),
+	  var(--curve-size) 0,
+	  /* top-right */ 100% 0,
+	  100% calc(100% - var(--curve-size)),
+	  /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+	  /* bottom-right 2 */ 0 100%
+	);
+	transition: color 2s;
+  }
+  
+  .btn-submit::after,
+  .btn-submit::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+  }
+  
+  .btn-submit::before {
+	background: var(--border-color);
+	background-size: 300% 300%;
+	animation: move-bg7234 5s ease infinite;
+	z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+	0% {
+	  background-position: 31% 0%;
+	}
+  
+	50% {
+	  background-position: 70% 100%;
+	}
+  
+	100% {
+	  background-position: 31% 0%;
+	}
+  }
+  
+  .btn-submit::after {
+	background: var(--bg);
+	z-index: -1;
+	clip-path: polygon(
+	  /* Top-left */ var(--border-width)
+		calc(var(--curve-size) + var(--border-width) * 0.5),
+	  calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+	  /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+	  calc(100% - var(--border-width))
+		calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+	  /* bottom-right 1 */
+		calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+		calc(100% - var(--border-width)),
+	  /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+	);
+	transition: clip-path 500ms;
+  }
+  
+  .btn-submit:where(:hover, :focus)::after {
+	clip-path: polygon(
+	  /* Top-left */ calc(100% - var(--border-width))
+		calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+	  calc(100% - var(--border-width)) var(--border-width),
+	  /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+	  calc(100% - var(--border-width))
+		calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+	  /* bottom-right 1 */
+		calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+		calc(100% - var(--border-width)),
+	  /* bottom-right 2 */
+		calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+		calc(100% - var(--border-width))
+	);
+	transition: 200ms;
+  }
+  
+  .btn-submit:where(:hover, :focus) {
+	color: #fff;
+  }
+  
