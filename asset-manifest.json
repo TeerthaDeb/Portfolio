@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.b7d8c52b.css",
-    "main.js": "/Portfolio/static/js/main.92587ade.js",
+    "main.css": "/Portfolio/static/css/main.e3e76888.css",
+    "main.js": "/Portfolio/static/js/main.362329d0.js",
     "static/media/bg-universe.mp4": "/Portfolio/static/media/bg-universe.1c029bf69e9d83b46cd9.mp4",
     "static/media/project-2.png": "/Portfolio/static/media/project-2.9b36c46e9b7aa14aef0d.png",
     "static/media/project-1.png": "/Portfolio/static/media/project-1.a64b1c497dcac4714030.png",
     "static/media/fallback-image.png": "/Portfolio/static/media/fallback-image.d7075bb6fc934f311561.png",
     "static/media/1 (2).png": "/Portfolio/static/media/1 (2).9bf6be85625873075eff.png",
-    "static/media/project-3.png": "/Portfolio/static/media/project-3.4a55f3dbd76da56ffa7f.png",
+    "static/media/project-3.png": "/Portfolio/static/media/project-3.8ee3579d65c16ca46d6b.png",
     "static/media/project-4.png": "/Portfolio/static/media/project-4.9c465582a9466fa3dc12.png",
     "static/media/png-transparent-flying-eagle-hd-logo-removebg-preview.png": "/Portfolio/static/media/png-transparent-flying-eagle-hd-logo-removebg-preview.0e86f241060652f71706.png",
     "index.html": "/Portfolio/index.html",
-    "main.b7d8c52b.css.map": "/Portfolio/static/css/main.b7d8c52b.css.map",
-    "main.92587ade.js.map": "/Portfolio/static/js/main.92587ade.js.map"
+    "main.e3e76888.css.map": "/Portfolio/static/css/main.e3e76888.css.map",
+    "main.362329d0.js.map": "/Portfolio/static/js/main.362329d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7d8c52b.css",
-    "static/js/main.92587ade.js"
+    "static/css/main.e3e76888.css",
+    "static/js/main.362329d0.js"
   ]
 }
